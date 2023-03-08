@@ -67,3 +67,15 @@ p {
   .left-content{}
   .right-content{}
 .attribution{}
+
+/* Interaction */
+.menu-item:hover *{
+  color: var(--active);
+}
+
+.outline-button:hover{
+  border-color: var(--active);
+}
+.outline-button:hover > *{
+  color: var(--active);
+}
