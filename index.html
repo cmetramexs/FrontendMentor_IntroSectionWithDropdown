@@ -17,7 +17,7 @@
       <img class="logo" src="./images/logo.svg" alt="Snap logo">
       <div class="menu-item hover-interaction" onclick="toggleFeaturesDropdown()">
         <p>Features</p>
-        <img class="arrow-icon" src="./images/icon-arrow-down.svg" alt="Simple down arrow icon">
+        <img class="arrow-icon" id="featuresArrow" src="./images/icon-arrow-down.svg" alt="Simple down arrow icon">
 
         <div class="dropdown-wrap" id="featuresDropdown">
           <div class="dropdown">
@@ -43,7 +43,7 @@
       </div>
       <div class="menu-item hover-interaction"  onclick="toggleCompanyDropdown()">
         <p>Company</p>
-        <img class="arrow-icon" src="./images/icon-arrow-down.svg" alt="Simple down arrow icon">
+        <img class="arrow-icon" id="companyArrow" src="./images/icon-arrow-down.svg" alt="Simple down arrow icon">
 
         <div class="dropdown-wrap" id="companyDropdown">
           <div class="dropdown hover-interaction">
@@ -112,14 +112,24 @@
   </div>
 
   <script>
+    let featuresExpand = false;
     let featuresDropdown = document.getElementById("featuresDropdown");
     function toggleFeaturesDropdown() {
+      featuresExpand = !featuresExpand;
       featuresDropdown.classList.toggle("open-menu");
+      document.getElementById("featuresArrow").src = (featuresExpand)
+          ? "./images/icon-arrow-up.svg"
+          : "./images/icon-arrow-down.svg";
     }
 
+    let companyExpand = false;
     let companyDropdown = document.getElementById("companyDropdown");
     function toggleCompanyDropdown() {
+      companyExpand = !companyExpand;
       companyDropdown.classList.toggle("open-menu");
+      document.getElementById("companyArrow").src = (companyExpand)
+          ? "./images/icon-arrow-up.svg"
+          : "./images/icon-arrow-down.svg";
     }
   </script>
 </body>
