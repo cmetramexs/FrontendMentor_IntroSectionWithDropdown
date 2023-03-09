@@ -122,7 +122,7 @@ p {
   .left-content h1{
     font-size: 93px;
     font-weight: 4000;
-    line-height: 110px;
+    line-height: 100px;
     margin-bottom: 6vh;
   }
   .left-content>p {
@@ -132,7 +132,7 @@ p {
     margin-bottom: 6vh;
   }
   .clients {
-    margin-top: 10vh;
+    margin-top: 12vh;
     align-items: center;
     justify-content: space-between;
   }
