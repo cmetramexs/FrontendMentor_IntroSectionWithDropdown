@@ -1,7 +1,7 @@
 /*DEBUG*/
-*{
-  border: 1px solid black;
-}
+/**{*/
+/*  border: 1px solid black;*/
+/*}*/
 
 :root {
   --inactive: #7f7f7f;
@@ -11,6 +11,9 @@
 * {
   margin: 0;
   padding: 0;
+  max-width:100%;
+  max-height:100%;
+  font-family: 'Helvetica', sans-serif;
 }
 /* General */
 body {
@@ -19,7 +22,6 @@ body {
 
 /* Text */
 p {
-  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   text-decoration: none;
   color: var(--inactive);
@@ -29,11 +31,26 @@ p {
 .outline-button {
   border: 2px solid var(--inactive);
   border-radius: 10px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+.solid-fill-button {
+  background-color: var(--active);
+  border-radius: 8px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  max-width: 100px;
+  padding: 12px;
+}
+.solid-fill-button p {
+  color: white;
 }
 
 /* Div-Specific */
 .hero {
-  min-height: 10vh;
+  min-height: 6vh;
   padding: 8px 25px;
   display: flex;
   align-items: center;
@@ -57,7 +74,6 @@ p {
     }
   #user-iam>* {
     text-align: center;
-
     cursor: pointer;
   }
 
@@ -87,9 +103,57 @@ p {
       transition: transform 0.5s;
     }
 
-.page{}
-  .left-content{}
-  .right-content{}
+.page {
+  display: flex;
+  flex: 1;
+  max-height: 77vh;
+  padding: 40px;
+}
+.left {
+  width: 60%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+}
+  .left-content {
+    max-width: 560px;
+  }
+  .left-content h1{
+    font-size: 93px;
+    font-weight: 4000;
+    line-height: 110px;
+    margin-bottom: 12%;
+  }
+  .left-content>p {
+    padding-right: 20%;
+    font-size: 18px;
+    line-height: 30px;
+    margin-bottom: 12%;
+  }
+  .clients {
+    margin-top: 25%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .client-logo {
+    min-width: 110px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+  }
+  .client-logo > * {
+    display: flex;
+    margin: 0 auto;
+  }
+  .right-content{
+    max-width: 40%;
+  }
+  .right-content>img{
+    max-width:100%;
+    max-height:100%;
+  }
 .attribution{}
 
 
@@ -105,10 +169,10 @@ p {
 }
 
 #featuresDropdown{
-  left: 5%;
+  left: 6%;
 }
 #companyDropdown{
-  left: 14%;
+  left: 16%;
 }
 #featuresDropdown.open-menu{
   max-height: 400px;
