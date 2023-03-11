@@ -22,7 +22,7 @@
 
 <div class="hero">
   <img class="logo" src="./images/logo.svg" alt="Snap logo">
-  <img class="open-menu-button" src="./images/icon-menu.svg" alt="Three horizontal lines" onClick="toggleNavMenu()">
+  <img id="navOpenButton" src="./images/icon-menu.svg" alt="Three horizontal lines" onClick="toggleNavOverlay(true)">
 </div>
 <img class="hero-image" src="./images/image-hero-mobile.png" alt="Picture of man holding laptop with geometric shapes">
 <div class="page">
@@ -41,9 +41,9 @@
   </div>
 </div>
 
-<div class="nav-overlay" id="navOverlay">
+<div class="nav-overlay" id="navOverlay" onclick="toggleNavOverlay(false)">
   <div class="nav-menu">
-    <img class="nav-close-button" src="./images/icon-close-menu.svg" alt="cross icon"/>
+    <img id="navCloseButton" src="./images/icon-close-menu.svg" alt="cross icon" onClick="toggleNavOverlay(false)"/>
     <div class="menu-item hover-interaction" onclick="toggleFeaturesDropdown()">
       <p>Features</p>
       <img class="arrow-icon" id="featuresArrow" src="./images/icon-arrow-down.svg" alt="Simple down arrow icon">
@@ -108,9 +108,9 @@
 </div>
 
 <script>
-  let navOverlay = document.getElementById("navOverlay")
-  function toggleNavMenu() {
-    navOverlay.classList.toggle("open-menu");
+  let navOverlay = document.getElementById("navOverlay");
+  function toggleNavOverlay(navOverlayExpand) {
+    navOverlay.style.display = (navOverlayExpand) ? "block" : "none";
   }
 
   let featuresExpand = false;
