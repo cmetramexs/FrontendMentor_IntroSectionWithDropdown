@@ -1,7 +1,7 @@
 /*DEBUG*/
-*{
-  border: 1px solid black;
-}
+/**{*/
+/*  border: 1px solid black;*/
+/*}*/
 
 :root {
   --inactive: #7f7f7f;
@@ -157,8 +157,14 @@ h1 {
 }
 .dropdown-link {
   display: flex;
+  align-content: start;
   text-decoration: none;
-  margin: 12px 30px;
+  margin: 12px 15px;
+}
+
+.dropdown-link img {
+  margin-right: 15px;
+  width: 16px;
 }
 .user-iam {
   margin-top: 30px;
@@ -187,9 +193,7 @@ h1 {
 
 #featuresDropdown.open-menu{
   max-height: 400px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 20px 3px;
 }
 #companyDropdown.open-menu{
   max-height: 400px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 20px 3px;
 }
