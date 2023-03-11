@@ -22,7 +22,7 @@
 
 <div class="hero">
   <img class="logo" src="./images/logo.svg" alt="Snap logo">
-  <img id="navOpenButton" src="./images/icon-menu.svg" alt="Three horizontal lines" onClick="toggleNavOverlay(true)">
+  <img id="navOpenButton" src="./images/icon-menu.svg" alt="Three horizontal lines" >
 </div>
 <img class="hero-image" src="./images/image-hero-mobile.png" alt="Picture of man holding laptop with geometric shapes">
 <div class="page">
@@ -41,15 +41,15 @@
   </div>
 </div>
 
-<div class="nav-overlay" id="navOverlay" onclick="toggleNavOverlay(false)">
+<div class="nav-overlay" id="navOverlay" >
   <div class="nav-menu">
-    <img id="navCloseButton" src="./images/icon-close-menu.svg" alt="cross icon" onClick="toggleNavOverlay(false)"/>
+    <img id="navCloseButton" src="./images/icon-close-menu.svg" alt="cross icon" />
     <div class="menu-item hover-interaction" onclick="toggleFeaturesDropdown()">
       <p>Features</p>
       <img class="arrow-icon" id="featuresArrow" src="./images/icon-arrow-down.svg" alt="Simple down arrow icon">
     </div>
 
-    <div class="dropdown-wrap" id="featuresDropdown" onclick="toggleFeaturesDropdown()">
+    <div class="dropdown-wrap" id="featuresDropdown">
       <div class="dropdown">
         <a href="/todo-list" class="dropdown-link hover-interaction">
           <img src="./images/icon-todo.svg" alt="Todo list icon in lavender">
@@ -96,11 +96,11 @@
       <p>About</p>
     </div>
 
-    <div id="user-iam">
+    <div class="user-iam">
       <div class="menu-item hover-interaction">
         <p>Login</p>
       </div>
-      <div class="outline-button">
+      <div class="menu-item outline-button">
         <p>Register</p>
       </div>
     </div>
@@ -108,9 +108,22 @@
 </div>
 
 <script>
-  let navOverlay = document.getElementById("navOverlay");
-  function toggleNavOverlay(navOverlayExpand) {
-    navOverlay.style.display = (navOverlayExpand) ? "block" : "none";
+  var navOverlay = document.getElementById("navOverlay");
+  var navOpenButton = document.getElementById("navOpenButton");
+  var navCloseButton = document.getElementById("navCloseButton");
+
+  navOpenButton.onclick = function() {
+    navOverlay.style.display = "block";
+  }
+
+  navCloseButton.onclick = function() {
+    navOverlay.style.display = "none";
+  }
+
+  navOverlay.onclick = function(event) {
+    if (event.target == navOverlay) {
+      navOverlay.style.display = "none";
+    }
   }
 
   let featuresExpand = false;
