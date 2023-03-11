@@ -1,0 +1,141 @@
+/*DEBUG*/
+*{
+  border: 1px solid black;
+}
+
+:root {
+  --inactive: #7f7f7f;
+  --active: #121212;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  max-width:100%;
+  max-height:100%;
+  font-family: 'Helvetica', sans-serif;
+}
+/* General */
+body {
+  background: #fafafa;
+}
+
+/* Text */
+p {
+  font-size: 18px;
+  font-weight: 5;
+  text-decoration: none;
+  text-align: center;
+  color: var(--inactive);
+}
+h1 {
+  display: inline;
+  font-size: 45px;
+  font-weight: 4500;
+}
+
+/* Common Components */
+.outline-button {
+  border: 2px solid var(--inactive);
+  border-radius: 10px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+}
+.solid-fill-button {
+  background-color: var(--active);
+  border-radius: 8px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  max-width: 100px;
+  padding: 12px;
+}
+.solid-fill-button p {
+  color: white;
+}
+
+/* Div-Specific */
+.hero {
+  min-height: 6vh;
+  padding: 8px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.hero * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.logo {
+  padding-top: 15px;
+  margin-right: 20px;
+}
+
+.page {
+  max-height: 77vh;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+.page * {
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+.page > p {
+  line-height: 25px;
+  margin-bottom: 5vh;
+}
+.clients {
+  margin-top: 10vh;
+  align-items: center;
+  justify-content: space-between;
+}
+.client-logo {
+  min-width: 110px;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+
+}
+.client-logo > * {
+  display: flex;
+  margin: 0 auto;
+}
+.hero-image{
+  max-width:100%;
+  max-height:100%;
+  margin-bottom: 5vh;
+}
+.title-hook {
+  margin-bottom: 3vh;
+  width: 400px;
+}
+
+/* Interaction */
+.hover-interaction:hover>p{
+  color: var(--active);
+}
+.outline-button:hover{
+  border-color: var(--active);
+}
+.outline-button:hover > *{
+  color: var(--active);
+}
+
+#featuresDropdown{
+  left: 6%;
+}
+#companyDropdown{
+  left: 16%;
+}
+#featuresDropdown.open-menu{
+  max-height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 20px 3px;
+}
+#companyDropdown.open-menu{
+  max-height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 3px 20px 3px;
+}

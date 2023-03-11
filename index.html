@@ -11,6 +11,14 @@
 
 </head>
 <body>
+  <script>
+    window.addEventListener("resize", function() {
+      if (!window.matchMedia("(min-width: 720px)").matches) {
+        console.log("Screen less than 720px");
+        window.location = 'mobile.html';
+      }
+    })
+  </script>
 
   <div class="hero">
     <div class="nav-menu">
