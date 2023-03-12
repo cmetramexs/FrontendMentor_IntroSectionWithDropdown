@@ -28,10 +28,10 @@ Users should be able to:
 
 **Desktop Designs**
 
-|    **Page**     |   <div style="width:290px">**Reference**</div>    | <div style="width:290px">**Implementation**</div> |
-|:---------------:|:-------------------------------------------------:|:-------------------------------------------------:|
-| Desktop Design  |     <img src="./design/desktop-design.jpg"/>      |        <img src="./samples/desktop.png"/>         |
-| Desktop Active  |      <img src="./design/active-states.jpg"/>      |     <img src="./samples/desktop-active.png"/>     |
+|    **Page**     |                        **Reference**                         |                             **Implementation**                             |
+|:---------------:|:------------------------------------------------------------:|:--------------------------------------------------------------------------:|
+| Desktop Design  | <img style="width:290px" src="./design/desktop-design.jpg"/> |           <img style="width:290px" src="./samples/desktop.png"/>           |
+| Desktop Active  | <img style="width:290px" src="./design/active-states.jpg"/>  |       <img style="width:290px" src="./samples/desktop-active.png"/>        |
 
 **Mobile Designs**
 
