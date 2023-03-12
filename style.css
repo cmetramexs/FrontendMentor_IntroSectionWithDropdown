@@ -3,11 +3,6 @@
 /*  border: 1px solid black;*/
 /*}*/
 
-:root {
-  --inactive: #7f7f7f;
-  --active: #121212;
-
-}
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +12,7 @@
 }
 /* General */
 body {
-  background: #fafafa;
+  background: var(--background);
 }
 
 /* Text */
@@ -45,7 +40,7 @@ p {
   padding: 12px;
 }
 .solid-fill-button p {
-  color: white;
+  color: var(--background);
 }
 
 /* Div-Specific */
@@ -84,7 +79,7 @@ p {
   overflow: hidden;
 }
   .dropdown {
-    background: #fff;
+    background: var(--background);
     padding: 10px;
     border-radius: 10px;
   }

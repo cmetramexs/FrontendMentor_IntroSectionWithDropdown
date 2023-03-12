@@ -1,0 +1,7 @@
+
+:root {
+  --inactive: #7f7f7f;
+  --active: #121212;
+  --background: #fefefe;
+  --overlay: rgba(0,0,0,0.4);
+}
