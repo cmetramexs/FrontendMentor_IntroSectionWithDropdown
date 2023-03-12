@@ -165,10 +165,10 @@ p {
 }
 
 #featuresDropdown{
-  left: 6%;
+  left: 110px;
 }
 #companyDropdown{
-  left: 16%;
+  left: 270px;
 }
 #featuresDropdown.open-menu{
   max-height: 400px;
