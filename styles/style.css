@@ -22,27 +22,6 @@ p {
   color: var(--inactive);
 }
 
-/* Common Components */
-.outline-button {
-  border: 2px solid var(--inactive);
-  border-radius: 10px;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-}
-.solid-fill-button {
-  background-color: var(--active);
-  border-radius: 8px;
-  vertical-align: middle;
-  text-align: center;
-  cursor: pointer;
-  max-width: 100px;
-  padding: 12px;
-}
-.solid-fill-button p {
-  color: var(--background);
-}
-
 /* Div-Specific */
 .hero {
   min-height: 6vh;
@@ -89,8 +68,15 @@ p {
     text-decoration: none;
     margin: 12px 10px;
   }
-    .dropdown-link img {
+    .icon-container {
+      width: 22px;
       margin-right: 15px;
+    }
+    .icon-container > img {
+      min-height: 22px;
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
     }
     .dropdown-link span {
       /*dropdown menu item arrow >, delay on hover*/
@@ -165,7 +151,7 @@ p {
 }
 
 #featuresDropdown{
-  left: 110px;
+  left: 100px;
 }
 #companyDropdown{
   left: 270px;

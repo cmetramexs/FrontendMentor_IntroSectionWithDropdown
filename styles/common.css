@@ -1,0 +1,31 @@
+
+:root {
+  --inactive: #7f7f7f;
+  --active: #121212;
+  --background: #fefefe;
+  --overlay: rgba(0,0,0,0.4);
+}
+
+/* Common Components */
+.outline-button {
+  border: 2px solid var(--inactive);
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 5px;
+}
+.outline-button > *{
+  vertical-align: middle;
+  text-align: center;
+}
+.solid-fill-button {
+  background-color: var(--active);
+  border-radius: 8px;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  max-width: 100px;
+  padding: 12px;
+}
+.solid-fill-button p {
+  color: var(--background);
+}
