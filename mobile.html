@@ -23,7 +23,9 @@
 
 <div class="hero">
   <img class="logo" src="./images/logo.svg" alt="Snap logo">
-  <img id="navOpenButton" src="./images/icon-menu.svg" alt="Three horizontal lines" onclick="openNavOverlay(true)">
+  <div id="navOpenButton" onclick="openNavOverlay(true)">
+    <img src="./images/icon-menu.svg" alt="Three horizontal lines">
+  </div>
 </div>
 <img class="hero-image" src="./images/image-hero-mobile.png" alt="Picture of man holding laptop with geometric shapes">
 <div class="page">
@@ -42,9 +44,11 @@
   </div>
 </div>
 
-<div class="nav-overlay" id="navOverlay" >
+<div class="nav-overlay" id="navOverlay">
   <div class="nav-menu">
-    <img id="navCloseButton" src="./images/icon-close-menu.svg" alt="cross icon" onclick="openNavOverlay(false)"/>
+    <div id="navCloseButton" onclick="openNavOverlay(false)">
+      <img src="./images/icon-close-menu.svg" alt="cross icon"/>
+    </div>
     <div class="menu-item hover-interaction" onclick="toggleFeaturesDropdown()">
       <p>Features</p>
       <img class="arrow-icon" id="featuresArrow" src="./images/icon-arrow-down.svg" alt="Simple down arrow icon">
